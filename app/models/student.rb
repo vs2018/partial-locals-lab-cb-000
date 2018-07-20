@@ -14,7 +14,7 @@ class Student < ActiveRecord::Base
   has_many :classroom_students
   has_many :classrooms, through: :classroom_students
   
-  def search(student_name)
+  def self.search(student_name)
     if student_name == ''
       return Student.all
     else
