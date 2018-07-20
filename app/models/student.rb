@@ -15,6 +15,7 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
   
   def search(student_name)
+    if student_name == ''
   end
 end
 
