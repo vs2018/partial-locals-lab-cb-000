@@ -16,7 +16,9 @@ class Student < ActiveRecord::Base
   
   def search(student_name)
     if student_name == ''
-      Student.all
+      return Student.all
+    else
+    end
   end
 end
 
