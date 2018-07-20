@@ -19,7 +19,7 @@ class Student < ActiveRecord::Base
     if student_name == ''
       return Student.all
     else
-      Student.where("lower(name) = ?", student)
+      'title LIKE ?','Batman%'
     end
   end
 end
