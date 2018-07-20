@@ -18,6 +18,7 @@ class Student < ActiveRecord::Base
     if student_name == ''
       return Student.all
     else
+      Student.find_by(name: student_name)
     end
   end
 end
