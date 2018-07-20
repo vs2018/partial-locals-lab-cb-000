@@ -19,7 +19,7 @@ class Student < ActiveRecord::Base
     if student_name == ''
       return Student.all
     else
-      Movie.where('title LIKE ?','Batman%')
+      Student.where('name LIKE ?','student%')
 
     end
   end
