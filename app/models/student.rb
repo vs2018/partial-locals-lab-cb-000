@@ -19,7 +19,7 @@ class Student < ActiveRecord::Base
     if student_name == ''
       return Student.all
     else
-      Student.where("lower(name) = ?", student.downcase)
+      Student.where("lower(name) = ?", student)
     end
   end
 end
