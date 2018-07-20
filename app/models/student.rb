@@ -19,7 +19,7 @@ class Student < ActiveRecord::Base
     if student_name == ''
       return Student.all
     else
-      Student.where('name LIKE ?','student%')
+      Student.where('name LIKE ?','#{student%}')
 
     end
   end
