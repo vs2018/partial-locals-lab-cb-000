@@ -15,10 +15,11 @@ class Student < ActiveRecord::Base
   has_many :classrooms, through: :classroom_students
   
   def self.search(student_name)
+    student = student_name.downcase
     if student_name == ''
       return Student.all
     else
-      Student.find_by(name: student_name)
+      Student.find_by(name: student)
     end
   end
 end
